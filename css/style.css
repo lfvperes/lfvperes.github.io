@@ -1,67 +1,70 @@
-*{
+/*
+	SCC0219 - Exercise 2
+	Nome: LUÍS FILIPE VASCONCELOS PERES
+	Nro USP: 10310641
+----------------------------------------
+*/
+*{										/*reset*/
 	margin: 0;
 	padding: 0;
 }
 
 body{
+	font-family: "Muli", sans-serif;
 	background-color: #D2D2D2;
 	color: #828282;
-	font-family: "Raleway", sans-serif;
 	font-size: 100%;
 }
 
 p{
-	margin: 5px;
-	font-size: 0.8em;
-	font-weight: normal;
-}
-
-h1{
-	margin: 5px;
-	font-size: 1.6em;
-	font-weight: 800;
-	color: coral;
+	font-size: 0.9em;
 }
 
 h2{
-	margin: 5px;
-	font-size: 1.2em;
+	font-family: "Merriweather Sans", sans-serif;
+	color: coral;
 }
 
-h3{
-	margin: 5px;
-	font-size: 1em;
+span{
+	color: coral;
+	font-size: 0.84em;
+}
+
+p, h4, h3, h2, #img-profile{
+	margin: 0.3em;
 }
 
 .container{
-	width: 40%;
+	width: 50%;
 	margin: auto;
 }
 
 .card{
 	background-color: #fff;
-	margin: 20px;
-	padding: 10px;
+	margin: 1.2em;
+	padding: 0.6em;
 }
 
 .text-center{
 	text-align: center;
 }
 
-.list-inline ul{
+ul.list-inline{
 	list-style: none;
 }
 
-.list-inline, .text-center li{
+.list-inline li, .text-center li{
 	display: inline-block;
-	padding: 20px 25px;
+	margin: 1.2em 1.5em;
+	border-bottom: 0.06em dashed #b2b2b2;
 }
 
 .list-inline a{
 	color: #828282;
 	text-decoration: none;
-	font-size: 0.8em;
+	font-size: 0.96em;
 	font-weight: 500;
+	font-variant: small-caps;
 }
 
 .img-circle{
@@ -69,31 +72,46 @@ h3{
 }
 
 #img-profile{
-	width: 25%;
-	margin: 5px;
+	width:9.5em;
+	padding:0.18em;
+	border: 0.06em dashed #b2b2b2;
 }
 
 .fa{
 	font-size: 2.2em;
-	padding-bottom: 6px;
+	padding-bottom: 0.36em;
 }
 
-.fa-facebook:hover, #facebook:hover{
+/*
+as ids foram criadas para que as palavras 
+fossem coloridas junto com os ícones
+quando o mouse passasse pelo link
+*/
+
+#facebook:hover{
 	color: #3b5998;
 }
 
-.fa-linkedin:hover, #linkedin:hover{
+#linkedin:hover{
 	color: #0e76a8;
 }
 
-.fa-twitter:hover, #twitter:hover{
+#twitter:hover{
 	color: #00acee;
 }
 
-.fa-github:hover, #github:hover{
+#github:hover{
 	color: #333;
 }
 
-#movies{
+#movies tr, #movies td{
+	padding: 0.3em;
+}
 
+#movies img{			/* eu queria colocar essa largura como '%' mas não */
+	width: 8.4em;		/* consegui, e não queria usar 'px'. deu certo com */
+}						/* 'em' mas não entendi o que aconteceu com a '%'  */
+
+#movies h4{
+	padding-bottom: 0.6em;
 }
