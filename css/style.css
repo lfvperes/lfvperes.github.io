@@ -1,9 +1,3 @@
-/*
-	SCC0219 - Exercise 2
-	Nome: LUÍS FILIPE VASCONCELOS PERES
-	Nro USP: 10310641
-----------------------------------------
-*/
 *{										/*reset*/
 	margin: 0;
 	padding: 0;
@@ -14,13 +8,53 @@ body{
 	background-color: #D2D2D2;
 	color: #828282;
 	font-size: 100%;
+	/* flex: auto; */
+}
+
+section{
+	display: flex;
+	justify-content: space-evenly;
+	height: 80%;
+	align-items: center;
 }
 
 p{
 	font-size: 0.9em;
 }
 
-h2{
+.card {
+	min-width: 15em;
+	/* height: 100%; */
+	background-color: #fff;
+	margin: 1.2em;
+	padding: 0.6em;
+}
+
+.card > div{
+	text-align: center;
+	display: block;
+}
+
+.item div {
+	background-color: #eee;
+	margin: 1em 0;
+	padding: 0.6em;
+	/* min-width: 12.6em; */
+}
+
+.item div:hover {
+	background-color:cornflowerblue;
+	color: #fff;
+}
+
+.item > a {
+	/* min-width: 12.6em; */
+	color: inherit;
+	text-decoration: none;
+	/* font-variant: small-caps; */
+}
+
+h3{
 	font-family: "Merriweather Sans", sans-serif;
 	color: coral;
 }
@@ -37,12 +71,6 @@ p, h4, h3, h2, #img-profile{
 .container{
 	width: 50%;
 	margin: auto;
-}
-
-.card{
-	background-color: #fff;
-	margin: 1.2em;
-	padding: 0.6em;
 }
 
 .text-center{
@@ -81,12 +109,6 @@ ul.list-inline{
 	font-size: 2.2em;
 	padding-bottom: 0.36em;
 }
-
-/*
-as ids foram criadas para que as palavras 
-fossem coloridas junto com os ícones
-quando o mouse passasse pelo link
-*/
 
 #facebook:hover{
 	color: #3b5998;
