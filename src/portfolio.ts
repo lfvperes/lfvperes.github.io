@@ -18,6 +18,7 @@ export interface PortfolioData {
     title: string;
     description: string;
   };
+  resume: string; // Add resume link
   projects: Project[];
   skills: string[];
   contact: {
@@ -40,6 +41,7 @@ const portfolio: PortfolioData = {
     description:
       'I am a forward-thinking developer with a passion for creating clean, efficient, and user-friendly applications. I have a strong foundation in both front-end and back-end development and enjoy bringing ideas to life in the browser.',
   },
+  resume: '#', // Placeholder link for the resume
   projects: [
     {
       name: 'Project One',
