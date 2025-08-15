@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "incremental": true, // Add this line
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2023",
+    "target": "ES2022", // Change to a valid target
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
@@ -17,9 +18,9 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    // "erasableSyntaxOnly": true, // Remove experimental option
+    "noFallthroughCasesInSwitch": true
+    // "noUncheckedSideEffectImports": true // Remove experimental option
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "tailwind.config.ts"] // Add tailwind.config.ts here
 }
