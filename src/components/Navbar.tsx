@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const navLinks = [
     ...(projects.length ? [{ name: 'Projects', href: '#projects' }] : []),
-    ...(skills.length ? [{ name: 'Skills', href: '#skills' }] : []),
+    ...(Object.values(skills).flat().length ? [{ name: 'Skills', href: '#skills' }] : []),
     ...(contact.email ? [{ name: 'Contact', href: '#contact' }] : []),
   ];
 
