@@ -1,4 +1,3 @@
-
 // portfolio.ts
 
 // Define the structure of a project
@@ -26,10 +25,11 @@ export interface PortfolioData {
     frontEnd: string[];
     backEnd: string[];
     databases: string[];
-    devOps: string[];
-    concepts: string[]; // New category for concepts/methodologies
+    platformsAndTooling: string[]; // Replaces devOps
+    machineLearning: string[];     // New category for ML
+    concepts: string[];
   };
-  tools: string[];
+  workflowAndEnvironment: string[]; // Replaces tools
   contact: {
     email: string;
     social: {
@@ -86,16 +86,19 @@ const portfolio: PortfolioData = {
     },
   ],
   skills: {
-    languages: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS', 'C/C++'],
+    languages: ['JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS', 'C/C++', 'SQL', 'Bash'],
     frontEnd: ['React', 'Vue.js', 'Axios', 'TailwindCSS', 'Bootstrap'],
-    backEnd: ['Node.js', 'Express', 'Django'],
-    databases: ['SQLite3', 'MongoDB'],
-    devOps: ['Docker', 'Git', 'GitHub', 'Unix/Linux', 'CI/CD', 'Vite', 'TensorFlow', 'Jest', 'Vercel'], // Added Jest, Vercel
-    concepts: ['RESTful APIs', 'Agile'], // Added new concepts
+    backEnd: ['Node.js', 'Express', 'Django', 'NestJS'],
+    databases: ['SQLite3', 'MongoDB', 'PostgreSQL'],
+    platformsAndTooling: ['Docker', 'Git', 'GitHub', 'Unix/Linux', 'Vite', 'Jest', 'Vercel', 'npm', 'pip'],
+    machineLearning: ['TensorFlow', 'Pandas', 'NumPy', 'Scikit-learn'],
+    concepts: ['RESTful APIs', 'Agile', 'CI/CD', 'TDD'],
   },
-  tools: [
+  workflowAndEnvironment: [
     'VSCodium',
     'Fedora Linux',
+    'Logseq',
+    'Postman'
   ],
   contact: {
     email: 'luisfvperes@gmail.com',
