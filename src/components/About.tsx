@@ -18,7 +18,7 @@ const About = () => {
               href={resume}
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300'
+              className='bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-3 px-6 rounded-lg transition duration-300'
             >
               View Resume
             </a>

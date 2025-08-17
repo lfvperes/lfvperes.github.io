@@ -11,7 +11,7 @@ const Contact = () => {
         <h2 className='text-3xl font-bold mb-8'>Contact</h2>
         <a
           href={`mailto:${contact.email}`}
-          className='inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 text-xl'
+          className='inline-block bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-4 px-8 rounded-lg transition duration-300 text-xl'
         >
           Email Me
         </a>

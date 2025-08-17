@@ -20,14 +20,14 @@ const Navbar = () => {
     <nav className='bg-gray-800 sticky top-0 z-50 shadow-md'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center h-16'>
-          <a href='#top' className='text-xl font-bold'>
+          <a href='#top' className='text-xl font-bold hover:text-blue-500 transition duration-300'>
             {name}
           </a>
 
           {/* Desktop Menu */}
           <div className='hidden md:flex space-x-8'>
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className='hover:text-blue-400 transition duration-300'>
+              <a key={link.name} href={link.href} className='hover:text-blue-500 transition duration-300'>
                 {link.name}
               </a>
             ))}
