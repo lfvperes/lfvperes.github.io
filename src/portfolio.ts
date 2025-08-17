@@ -44,11 +44,11 @@ const portfolio: PortfolioData = {
   name: 'Luís Peres',
   title: 'Web Developer & Software Engineer',
   description:
-    "I'm a passionate Full-Stack Engineer specializing in Front-End development. I build and design exceptional digital experiences.",
+    "I'm a Full-Stack Engineer specializing in Front-End development. I craft digital experiences by merging code and creativity.",
   about: {
     title: 'About Me',
     description:
-      'I am a forward-thinking developer with a passion for creating clean, efficient, and user-friendly applications. I have a strong foundation in both front-end and back-end development and enjoy bringing ideas to life in the browser.',
+      "I actively explore new technologies and methodologies to enhance my development toolkit. My focus is on optimizing application performance for smooth, responsive user experiences, and I'm dedicated to delivering high-quality outcomes. While my primary strength is Front-End development, I possess a solid understanding of Back-End principles and am actively expanding my server-side expertise.",
   },
   resume: 'https://rxresu.me/lfvperes/webdev-jr',
   projects: [
@@ -63,7 +63,7 @@ const portfolio: PortfolioData = {
     {
       name: 'Cidades do Brasil',
       description:
-        'A Bluesky/X bot that posts a random Brazilian city every 12 hours. It fetches data from the Backsky API, then uses Google\'s Maps Static and Places APIs to fetch more content. Automated with GitHub Actions.',
+        "A Bluesky/X bot that posts a random Brazilian city every 12 hours. It fetches data from the Backsky API, then uses Google's Maps Static and Places APIs to fetch more content. Automated with GitHub Actions.",
       stack: ['TypeScript', 'Django', 'Sqlite3', 'AT Protocol'],
       sourceCode: 'https://github.com/lfvperes/cidades-br',
       livePreview: 'https://bsky.app/profile/cidades-do-brasil.bsky.social',
