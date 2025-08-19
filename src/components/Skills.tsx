@@ -1,28 +1,39 @@
-import portfolio from '../portfolio';
+// Removed direct import of portfolio
+// import portfolio from '../portfolio';
+
+// Import necessary types
+import type { IconType } from 'react-icons';
+import type { PortfolioData } from '../portfolio'; // Import the main PortfolioData type
+
+// Import icons (assuming these are correctly imported in App.tsx or globally)
 import {
   IoLogoJavascript, IoLogoHtml5, IoLogoCss3,
   IoLogoNodejs, IoLogoGithub, IoIosMore
 } from 'react-icons/io';
-import { 
-  IoLogoReact, IoLogoVue, IoLogoDocker, 
-  IoSyncOutline, IoLogoPython, IoSettingsSharp 
+import {
+  IoLogoReact, IoLogoVue, IoLogoDocker,
+  IoSyncOutline, IoLogoPython, IoSettingsSharp
 } from "react-icons/io5";
-import { 
-  SiTypescript, SiTailwindcss, SiExpress, SiSqlite, 
-  SiVite, SiTensorflow, SiVscodium, SiFedora, 
-  SiDjango, SiMongodb, SiCplusplus, SiAxios, SiJest, 
+import {
+  SiTypescript, SiTailwindcss, SiExpress, SiSqlite,
+  SiVite, SiTensorflow, SiVscodium, SiFedora,
+  SiDjango, SiMongodb, SiCplusplus, SiAxios, SiJest,
   SiVercel, SiLogseq, SiGnubash, SiNestjs, SiNpm,
   SiPypi, SiPandas, SiNumpy, SiScikitlearn, SiPostman, SiPostgresql
 } from 'react-icons/si';
 import { FaLinux, FaBootstrap, FaGitAlt, FaDatabase, FaTasks } from 'react-icons/fa';
 import { MdLoop } from 'react-icons/md';
-import type { IconType } from 'react-icons';
 
-const Skills = () => {
-  const { skills, workflowAndEnvironment } = portfolio;
+// Define the props interface for the Skills component
+interface SkillsProps {
+  skills: PortfolioData['skills']; // Use the skills type from PortfolioData
+  workflowAndEnvironment: PortfolioData['workflowAndEnvironment']; // Use the workflow type
+}
 
+const Skills = ({ skills, workflowAndEnvironment }: SkillsProps) => {
   // Check if skills object and its properties exist and have content
-  if (!skills || (!skills.languages.length && !skills.frontEnd.length && !skills.backEnd.length && !skills.databases.length && !skills.platformsAndTooling.length && !skills.concepts.length)) {
+  // The check for skills.concepts and skills.machineLearning are now handled within SkillCategory
+  if (!skills || (!skills.languages.length && !skills.frontEnd.length && !skills.backEnd.length && !skills.databases.length && !skills.platformsAndTooling.length)) {
     return null;
   }
 

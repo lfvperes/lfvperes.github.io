@@ -1,7 +1,13 @@
-import portfolio from '../portfolio';
+import React from 'react';
+import type { PortfolioData } from '../portfolio';
 
-const Contact = () => {
-  const { contact } = portfolio;
+interface ContactProps {
+  contact: PortfolioData['contact'];
+  resume: string;
+  language: 'en' | 'pt';
+}
+
+const Contact = ({ contact }: ContactProps) => {
 
   if (!contact.email) return null;
 

@@ -1,8 +1,21 @@
-import portfolio from '../portfolio';
+import React from 'react';
 
-const About = () => {
-  const { about, resume, contact } = portfolio;
+// Define the props interface for the About component
+interface AboutProps {
+  about: {
+    title: string;
+    description: string;
+  };
+  resume: string; // Added resume prop
+  contact: { // Added contact prop
+    social: {
+      github: string;
+      linkedin: string;
+    };
+  };
+}
 
+const About = ({ about, resume, contact }: AboutProps) => {
   return (
     <section id='about' className='py-20 bg-gray-800'>
       <div className='container mx-auto px-4'>

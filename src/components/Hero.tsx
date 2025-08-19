@@ -1,8 +1,13 @@
-import portfolio from '../portfolio';
+import React from 'react';
 
-const Hero = () => {
-  const { name, title, description } = portfolio;
+// Define the props interface for the Hero component
+interface HeroProps {
+  name: string;
+  title: string;
+  description: string;
+}
 
+const Hero = ({ name, title, description }: HeroProps) => {
   return (
     <section id='hero' className='py-20 text-center'>
       <div className='container mx-auto'>

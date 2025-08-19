@@ -1,8 +1,14 @@
 // src/components/Navbar.tsx
-import { useState } from 'react';
+import React, { useState } from 'react';
 import portfolio from '../portfolio';
+import { FaGlobe } from 'react-icons/fa'; // Import globe icon
 
-const Navbar = () => {
+interface NavbarProps {
+  toggleLanguage: () => void;
+  language: 'en' | 'pt'; // Add language prop
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, language }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { name, projects, skills, contact } = portfolio;
 
@@ -20,6 +26,14 @@ const Navbar = () => {
     <nav className='bg-gray-800 sticky top-0 z-50 shadow-md'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center h-16'>
+          {/* Language Indicator */}
+          <button onClick={toggleLanguage} className='ml-4 flex items-center bg-gray-900'>
+            <FaGlobe className='mr-2' />
+            <span className={language === 'en' ? 'text-blue-500' : ''}>EN</span>
+            <span>&nbsp;|&nbsp;</span>
+            <span className={language === 'pt' ? 'text-blue-500' : ''}>PT</span>
+          </button>
+
           <a href='#top' className='text-xl font-bold hover:text-blue-500 transition duration-300'>
             {name}
           </a>

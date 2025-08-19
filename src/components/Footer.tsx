@@ -1,14 +1,18 @@
-import portfolio from '../portfolio';
+import React from 'react';
+import type { PortfolioData } from '../portfolio';
 
-const Footer = () => {
-  const { name, contact } = portfolio;
+interface FooterProps {
+  name: string;
+  social: PortfolioData['contact']['social'];
+}
 
+const Footer = ({ name, social }: FooterProps) => {
   return (
     <footer className='py-6 bg-gray-800 text-center text-gray-400'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-center mb-4'>
           <a
-            href={contact.social.github}
+            href={social.github}
             target='_blank'
             rel='noopener noreferrer'
             className='hover:text-white mx-4'
@@ -19,7 +23,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href={contact.social.linkedin}
+            href={social.linkedin}
             target='_blank'
             rel='noopener noreferrer'
             className='hover:text-white mx-4'

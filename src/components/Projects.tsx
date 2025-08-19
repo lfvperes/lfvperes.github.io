@@ -1,9 +1,16 @@
 import { useRef, useEffect } from 'react';
-import portfolio from '../portfolio';
+// No longer importing portfolio directly
+// import portfolio from '../portfolio';
 import ProjectCard from './ProjectCard';
+import type { Project } from '../portfolio'; // Import the Project type
 
-const Projects = () => {
-  const { projects } = portfolio;
+// Define the props interface for the Projects component
+interface ProjectsProps {
+  projects: Project[];
+}
+
+const Projects = ({ projects }: ProjectsProps) => {
+  // const { projects } = portfolio; // Removed
   const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +51,8 @@ const Projects = () => {
     };
   }, [projects]); // Rerun if the projects data changes
 
-  if (!projects.length) return null;
+  // The 'projects' prop will be used directly here, so no need for this check if App.tsx handles empty arrays
+  // if (!projects.length) return null;
 
   return (
     <section id='projects' className='py-20'>
