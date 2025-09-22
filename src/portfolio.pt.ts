@@ -8,6 +8,7 @@ export interface Project {
 
 export interface PortfolioData {
   name: string;
+  intro: string;
   title: string;
   description: string;
   about: {
@@ -37,9 +38,10 @@ export interface PortfolioData {
 
 const portfolio: PortfolioData = {
   name: 'Luís Peres',
-  title: 'Web Developer & Software Engineer',
+  intro: "Olá, eu sou ",
+  title: 'Desenvolvedor Web & Engenheiro de Software',
   description:
-    "Sou um Engenheiro Full-Stack especializado em desenvolvimento Front-End. Crio experiências digitais ao unir código e criatividade.",
+    "Sou um Engenheiro Full-Stack especializado em desenvolvimento Front-End. Crio experiências digitais unindo código e criatividade.",
   about: {
     title: 'Sobre Mim',
     description:

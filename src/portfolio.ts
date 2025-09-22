@@ -12,6 +12,7 @@ export interface Project {
 // Define the structure for the entire portfolio
 export interface PortfolioData {
   name: string;
+  intro: string;
   title: string;
   description: string;
   about: {
@@ -42,6 +43,7 @@ export interface PortfolioData {
 // Placeholder data
 const portfolio: PortfolioData = {
   name: 'Luís Peres',
+  intro: "Hi, I'm ",
   title: 'Web Developer & Software Engineer',
   description:
     "I'm a Full-Stack Engineer specializing in Front-End development. I craft digital experiences by merging code and creativity.",

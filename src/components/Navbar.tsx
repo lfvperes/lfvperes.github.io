@@ -29,9 +29,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, language }) => {
           {/* Language Indicator */}
           <button onClick={toggleLanguage} className='ml-4 flex items-center bg-gray-900'>
             <FaGlobe className='mr-2' />
-            <span className={language === 'en' ? 'text-blue-500' : 'text-gray-600'}>EN</span>
+            <span className={language === 'en' ? 'text-blue-500' : 'text-gray-600'}>🇺🇸 EN</span>
             <span>&nbsp;|&nbsp;</span>
-            <span className={language === 'pt' ? 'text-blue-500' : 'text-gray-600'}>PT</span>
+            <span className={language === 'pt' ? 'text-blue-500' : 'text-gray-600'}>🇧🇷 PT</span>
           </button>
 
           <a href='#top' className='text-xl font-bold hover:text-blue-500 transition duration-300'>
