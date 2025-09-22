@@ -1,69 +1,74 @@
-# React + TypeScript + Vite
+# Luís Peres - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the repository for my personal portfolio website, a single-page application built with modern web technologies. It showcases my projects, skills, and professional background.
 
-Currently, two official plugins are available:
+**Deployed [here](https://lfvperes.github.io)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Component-Based Architecture:** Built with React, featuring distinct components for each section (Hero, About, Projects, etc.).
+-   **Multi-Language Support:** Content can be toggled between English and Portuguese.
+-   **Responsive Design:** Styled with Tailwind CSS for a seamless experience on all devices.
+-   **Dynamic Content:** Portfolio data is managed centrally, making it easy to update projects and skills.
+-   **Smooth Scrolling:** Includes a "Scroll to Top" button for better navigation.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+-   **Framework:** [React](https://react.dev/)
+-   **Language:** [TypeScript](https://www.typescriptlang.org/)
+-   **Build Tool:** [Vite](https://vitejs.dev/)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+-   **Linting:** [ESLint](https://eslint.org/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run this project locally, follow these steps:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-repo-name
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Run the development server using Vite:**
+    ```bash
+    npm run dev # vite
+    ```
+    The application will be available at `http://localhost:5173`.
+
+5.  **Build for Production**:
+    ```bash
+    npm run build # tsc -b && vite build
+    ```
+    or
+
+    ```bash
+    npm run predeploy # npm run build
+    ```
+    This command will generate the production-ready build in the `dist` folder.
+
+6.  **Serve the Production Build (optional):**
+    If you want to test the production build locally before deploying, you can use Vite:
+
+    ```bash
+    npm run preview # vite preview
+    ```
+
+    The production build will be served at `http://localhost:4173/` (or another available port).
+
+### Deployment
+
+This portfolio is automatically deployed to GitHub Pages. Any push to the `main` branch will trigger a new build and deployment.
