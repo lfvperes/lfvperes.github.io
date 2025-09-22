@@ -1,4 +1,3 @@
-import React from 'react';
 import type { PortfolioData } from '../portfolio';
 
 interface FooterProps {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -37,6 +37,7 @@ function App() {
       <main>
         <Hero
           name={portfolioData.name}
+          intro={portfolioData.intro}
           title={portfolioData.title}
           description={portfolioData.description}
         />

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Define the props interface for the About component
 interface AboutProps {
   about: {
