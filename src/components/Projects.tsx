@@ -1,12 +1,13 @@
 import { useRef, useEffect } from 'react';
-// No longer importing portfolio directly
-// import portfolio from '../portfolio';
 import ProjectCard from './ProjectCard';
 import type { Project } from '../portfolio'; // Import the Project type
 
 // Define the props interface for the Projects component
 interface ProjectsProps {
-  projects: Project[];
+  projects: {
+    title: string;
+    content: Project[];
+  };
 }
 
 const Projects = ({ projects }: ProjectsProps) => {
@@ -49,7 +50,7 @@ const Projects = ({ projects }: ProjectsProps) => {
     return () => {
       window.removeEventListener('resize', equalizeCardHeights);
     };
-  }, [projects]); // Rerun if the projects data changes
+  }, [projects.content]); // Rerun if the projects data changes
 
   // The 'projects' prop will be used directly here, so no need for this check if App.tsx handles empty arrays
   // if (!projects.length) return null;
@@ -57,10 +58,10 @@ const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section id='projects' className='py-20'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-3xl font-bold text-center mb-12'>Projects</h2>
+        <h2 className='text-3xl font-bold text-center mb-12'>{projects.title}</h2>
         <div ref={gridRef} className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+          {projects.content.map((project, index) => (
+            <ProjectCard key={index} project={project}/>
           ))}
         </div>
       </div>

@@ -7,7 +7,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const isBlueskyProject = project.livePreview.includes('bsky.app');
+  const isBlueskyProject = project.livePreview.content.includes('bsky.app');
 
   return (
     <div className='bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col'>
@@ -25,20 +25,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className='p-6 pt-0'>
         <div className='flex justify-end mt-4'>
           <a
-            href={project.sourceCode}
+            href={project.sourceCode.content}
             target='_blank'
             rel='noopener noreferrer'
             className='text-blue-400 hover:text-blue-500 font-semibold transition duration-300 mr-4'
           >
-            Source Code
+            {project.sourceCode.title}
           </a>
           <a
-            href={project.livePreview}
+            href={project.livePreview.content}
             target='_blank'
             rel='noopener noreferrer'
             className='text-blue-400 hover:text-blue-500 font-semibold transition duration-300 flex items-center'
           >
-            Live Preview
+            {project.livePreview.title}
             {isBlueskyProject && <SiBluesky className='ml-2' />}
           </a>
         </div>

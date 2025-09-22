@@ -4,12 +4,20 @@ interface AboutProps {
     title: string;
     description: string;
   };
-  resume: string; // Added resume prop
-  contact: { // Added contact prop
-    social: {
-      github: string;
-      linkedin: string;
-    };
+  resume: {
+    title: string;
+    content: string;
+  };
+  contact: {
+    title: string;
+    content: {
+      text: string;
+      email: string;
+      social: {
+        github: string;
+        linkedin: string;
+      };
+    }
   };
 }
 
@@ -26,16 +34,16 @@ const About = ({ about, resume, contact }: AboutProps) => {
           </div>
           <div className='md:w-1/3 text-center'>
             <a
-              href={resume}
+              href={resume.content}
               target='_blank'
               rel='noopener noreferrer'
               className='bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-3 px-6 rounded-lg transition duration-300'
             >
-              View Resume
+              {resume.title}
             </a>
             <div className='flex justify-center mt-6'>
               <a
-                href={contact.social.github}
+                href={contact.content.social.github}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-white mx-4'
@@ -47,7 +55,7 @@ const About = ({ about, resume, contact }: AboutProps) => {
                 </svg>
               </a>
               <a
-                href={contact.social.linkedin}
+                href={contact.content.social.linkedin}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-gray-400 hover:text-white mx-4'

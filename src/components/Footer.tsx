@@ -2,10 +2,11 @@ import type { PortfolioData } from '../portfolio';
 
 interface FooterProps {
   name: string;
-  social: PortfolioData['contact']['social'];
+  social: PortfolioData['contact']['content']['social'];
+  copyright: PortfolioData['copyright'];
 }
 
-const Footer = ({ name, social }: FooterProps) => {
+const Footer = ({ name, social, copyright }: FooterProps) => {
   return (
     <footer className='py-6 bg-gray-800 text-center text-gray-400'>
       <div className='container mx-auto px-4'>
@@ -34,7 +35,7 @@ const Footer = ({ name, social }: FooterProps) => {
           </a>
         </div>
         <p>
-          &copy; {new Date().getFullYear()} {name}. All Rights Reserved.
+          &copy; {new Date().getFullYear()} {name}. {copyright}
         </p>
       </div>
     </footer>

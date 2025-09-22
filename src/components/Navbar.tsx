@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
-import portfolio from '../portfolio';
+import { enPortfolio, ptPortfolio } from '../portfolio';
 import { FaGlobe } from 'react-icons/fa'; // Import globe icon
 
 interface NavbarProps {
@@ -10,16 +10,16 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, language }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { name, projects, skills, contact } = portfolio;
+  const { name, projects, skills, contact } = language == 'en'? enPortfolio : ptPortfolio;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const navLinks = [
-    ...(projects.length ? [{ name: 'Projects', href: '#projects' }] : []),
-    ...(Object.values(skills).flat().length ? [{ name: 'Skills', href: '#skills' }] : []),
-    ...(contact.email ? [{ name: 'Contact', href: '#contact' }] : []),
+    ...(projects.content.length ? [{ name: projects.title, href: '#projects' }] : []),
+    ...(Object.values(skills.content).flat().length ? [{ name: skills.title.title.split(" ")[0], href: '#skills' }] : []),
+    ...(contact.content.email ? [{ name: contact.title, href: '#contact' }] : []),
   ];
 
   return (
@@ -28,10 +28,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleLanguage, language }) => {
         <div className='flex justify-between items-center h-16'>
           {/* Language Indicator */}
           <button onClick={toggleLanguage} className='ml-4 flex items-center bg-gray-900'>
-            <FaGlobe className='mr-2' />
-            <span className={language === 'en' ? 'text-blue-500' : 'text-gray-600'}>🇺🇸 EN</span>
-            <span>&nbsp;|&nbsp;</span>
-            <span className={language === 'pt' ? 'text-blue-500' : 'text-gray-600'}>🇧🇷 PT</span>
+            <FaGlobe className='mr-2 text-xs' />
+            <span className={`text-xs ${language === 'en' ? 'text-blue-500' : 'text-gray-600'}`}>🇺🇸 EN</span>
+            <span className='text-xs'>&nbsp;|&nbsp;</span>
+            <span className={`text-xs ${language === 'pt' ? 'text-blue-500' : 'text-gray-600'}`}>🇧🇷 PT</span>
           </button>
 
           <a href='#top' className='text-xl font-bold hover:text-blue-500 transition duration-300'>

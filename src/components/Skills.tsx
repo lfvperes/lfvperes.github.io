@@ -33,7 +33,7 @@ interface SkillsProps {
 const Skills = ({ skills, workflowAndEnvironment }: SkillsProps) => {
   // Check if skills object and its properties exist and have content
   // The check for skills.concepts and skills.machineLearning are now handled within SkillCategory
-  if (!skills || (!skills.languages.length && !skills.frontEnd.length && !skills.backEnd.length && !skills.databases.length && !skills.platformsAndTooling.length)) {
+  if (!skills || (!skills.content.languages.length && !skills.content.frontEnd.length && !skills.content.backEnd.length && !skills.content.databases.length && !skills.content.platformsAndTooling.length)) {
     return null;
   }
 
@@ -133,23 +133,23 @@ const Skills = ({ skills, workflowAndEnvironment }: SkillsProps) => {
   return (
     <section id='skills' className='py-20 bg-gray-800'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-3xl font-bold text-center mb-12 text-white'>Skills & Tools</h2>
-        <SkillCategory title='Languages' items={skills.languages} />
-        <SkillCategory title='Front-End' items={skills.frontEnd} />
-        <SkillCategory title='Back-End' items={skills.backEnd} />
-        <SkillCategory title='Databases' items={skills.databases} />
-        <SkillCategory title='Platforms & Tooling' items={skills.platformsAndTooling} />
+        <h2 className='text-3xl font-bold text-center mb-12 text-white'>{skills.title.title}</h2>
+        <SkillCategory title={skills.title.languages} items={skills.content.languages} />
+        <SkillCategory title={skills.title.frontEnd} items={skills.content.frontEnd} />
+        <SkillCategory title={skills.title.backEnd} items={skills.content.backEnd} />
+        <SkillCategory title={skills.title.databases} items={skills.content.databases} />
+        <SkillCategory title={skills.title.platformsAndTooling} items={skills.content.platformsAndTooling} />
 
-        {skills.concepts && skills.concepts.length > 0 && (
-          <SkillCategory title='Concepts' items={skills.concepts} />
+        {skills.content.concepts && skills.content.concepts.length > 0 && (
+          <SkillCategory title={skills.title.concepts} items={skills.content.concepts} />
         )}
 
-        {skills.machineLearning && skills.machineLearning.length > 0 && (
-          <SkillCategory title='Machine Learning' items={skills.machineLearning} />
+        {skills.content.machineLearning && skills.content.machineLearning.length > 0 && (
+          <SkillCategory title={skills.title.machineLearning} items={skills.content.machineLearning} />
         )}
 
-        {workflowAndEnvironment && workflowAndEnvironment.length > 0 && (
-          <SkillCategory title='Workflow & Environment' items={workflowAndEnvironment} isToolList={true} />
+        {workflowAndEnvironment && workflowAndEnvironment.content.length > 0 && (
+          <SkillCategory title={workflowAndEnvironment.title} items={workflowAndEnvironment.content} isToolList={true} />
         )}
       </div>
     </section>

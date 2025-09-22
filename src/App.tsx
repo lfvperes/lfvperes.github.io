@@ -8,19 +8,18 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import type { PortfolioData } from './portfolio';
-import * as enPortfolio from './portfolio';
-import * as ptPortfolio from './portfolio.pt';
+import { enPortfolio, ptPortfolio } from './portfolio'
 
 function App() {
   const [language, setLanguage] = useState<'en' | 'pt'>('en');
-  const [portfolioData, setPortfolioData] = useState<PortfolioData>(enPortfolio.default);
+  const [portfolioData, setPortfolioData] = useState<PortfolioData>(enPortfolio);
 
   useEffect(() => {
     async function loadPortfolioData() {
       if (language === 'en') {
-        setPortfolioData(enPortfolio.default);
+        setPortfolioData(enPortfolio);
       } else {
-        setPortfolioData(ptPortfolio.default);
+        setPortfolioData(ptPortfolio);
       }
     }
 
@@ -53,11 +52,11 @@ function App() {
         />
         <Contact
           contact={portfolioData.contact}
-          resume={portfolioData.resume}
+          resume={portfolioData.resume.content}
           language={language}
         />
       </main>
-      <Footer name={portfolioData.name} social={portfolioData.contact.social} />
+      <Footer name={portfolioData.name} social={portfolioData.contact.content.social} copyright={portfolioData.copyright} />
       <ScrollToTop />
     </div>
   );
