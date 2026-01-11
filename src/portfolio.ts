@@ -92,7 +92,21 @@ const enPortfolio: PortfolioData = {
     title: 'Projects',
     content: [
     {
-      name: 'Backsky',
+      name: 'VHMS',
+      description:
+        'Veterinary Hospital Management System made with Django. In development.',
+      stack: ['Django', 'Python', 'Sqlite3', 'Axios', 'CI/CD'],
+      sourceCode: {
+        title: 'Source Code',
+        content: 'https://github.com/lfvperes/vhms'
+      },
+      livePreview: {
+        title: 'Live Preview',
+        content: 'https://github.com/lfvperes/vhms'
+      },
+    },
+    {
+      name: 'Backsky API',
       description:
         'REST API to fetch information from a list of Brazilian cities or choose randomly. A database built upon IBGE public data. Back-end for Cidades do Brasil. Hosted on Northflank. Preview page using React.',
       stack: ['Django', 'Sqlite3', 'Axios', 'React', 'TypeScript', 'CI/CD'],
@@ -210,6 +224,20 @@ const ptPortfolio: PortfolioData = {
   projects: {
     title: 'Projetos',
     content: [
+      {
+        name: 'VHMS',
+      description:
+        'Sistema de genenciamento de hospital veterinário feito com Django. Em desenvolvimento.',
+      stack: ['Django', 'Python', 'Sqlite3', 'Axios', 'CI/CD'],
+      sourceCode: {
+        title: 'Código Fonte',
+        content: 'https://github.com/lfvperes/vhms'
+      },
+      livePreview: {
+        title: 'Veja online',
+        content: 'https://github.com/lfvperes/vhms'
+      },
+      },
       {
         name: 'Backsky',
         description:
