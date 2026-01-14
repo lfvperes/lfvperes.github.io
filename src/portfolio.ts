@@ -78,11 +78,11 @@ const enPortfolio: PortfolioData = {
   intro: "Hi, I'm ",
   title: 'Web Developer & Software Engineer',
   description:
-    "I'm a Full-Stack Engineer specializing in Front-End development. I craft digital experiences by merging code and creativity.",
+    "I'm a Full-Stack Software Engineer specialized in Front-End. My main stack: React, Django & SQLite",
   about: {
     title: 'About Me',
     description:
-      "I actively explore new technologies and methodologies to enhance my development toolkit. My focus is on optimizing application performance for smooth, responsive user experiences, and I'm dedicated to delivering high-quality outcomes. While my primary strength is Front-End development, I possess a solid understanding of Back-End principles and am actively expanding my server-side expertise.",
+      "Actively exploring new tech, I'm always tryint to enhance my dev toolkit. Focused on optimizing app performance for smooth, responsive user experiences, I'm dedicated to deliver high-quality results. While my stront suit is Front-End, I possess solid knowledge of Back-End development and I'm expanding my server-side expertise.",
   },
   resume: {
     title: 'View Resume',
