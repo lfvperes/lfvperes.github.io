@@ -211,11 +211,11 @@ const ptPortfolio: PortfolioData = {
   intro: "Olá, eu sou ",
   title: 'Desenvolvedor Web & Engenheiro de Software',
   description:
-    "Sou um Engenheiro Full-Stack especializado em desenvolvimento Front-End. Crio experiências digitais unindo código e criatividade.",
+    "Sou um Engenheiro Full-Stack especializado em Front-End. Main stack: React, Django & SQLite.",
   about: {
     title: 'Sobre Mim',
     description:
-      "Ativamente exploro novas tecnologias e metodologias para aprimorar minhas habilidades com ferramentas de desenvolvimento. Meu foco é em otimizar o desempenho de aplicações em busca de experiências de usuário suaves e responsivas, e me dedico a entregar resultados de alta qualidade. Embora minha principal habilidade seja no desenvolvimento Front-End, possuo uma sólida compreensão dos princípios de Back-End e estou ativamente expandindo meus conhecimentos em desenvolvimento server-side.",
+      "Ativamente explorando novas tecnologias, estou sempre tentaneo aprimorar minhas habilidades e ferramentas de desenvolvimento disponíveis. Focado em otimizar o desempenho de aplicações em busca de experiências de usuário suaves e responsivas, me dedico a entregar resultados de alta qualidade. Embora meu forte seja no Front-End, possuo uma sólida compreensão do desenvolvimento Back-End e estou expandindo meus conhecimentos em desenvolvimento server-side.",
   },
   resume: {
     title: 'Ver Currículo',
