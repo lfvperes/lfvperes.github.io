@@ -9,7 +9,7 @@ interface HeroProps {
 const Hero = ({ name, intro, title, description }: HeroProps) => {
   return (
     <section id='hero' className='py-20 text-center'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto px-6'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>
           {intro}<span className='text-blue-500'>{name}</span>.
         </h1>
